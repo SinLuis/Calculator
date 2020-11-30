@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Order">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg"
+        android:weightSum="15"
+        >
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:gravity="left">
+
+            <TextView
+                android:id="@+id/textOrder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:paddingLeft="5dp"
+                android:text="Order :"
+                android:textColor="@android:color/white"
+                android:textSize="34sp" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+
+            >
+
+            <ImageButton
+                android:id="@+id/iconKeranjang"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+
+                android:scaleType="fitCenter"
+                android:layout_gravity="center|right"
+                android:layout_marginLeft="5dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/keranjang1"
+                android:background="#8acff0"
+                >
+
+            </ImageButton>
+        </RelativeLayout>
+
+<!--        Tampilan Menu-->
+        <GridLayout
+            android:columnCount="1"
+            android:rowCount="3"
+            android:alignmentMode="alignMargins"
+            android:columnOrderPreserved="false"
+            android:layout_weight=  "4"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:padding="14dp">
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/OrderGrid"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="2"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                app:cardElevation="8dp"
+                app:cardCornerRadius="8dp"
+                app:cardBackgroundColor="@color/white"
+
+                >
+
+                <LinearLayout
+                    android:layout_gravity="center|left"
+                    android:layout_margin="16dp"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    >
+
+                    <ImageView
+                        android:id="@+id/OrderImage"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_gravity="center|right"
+                    android:layout_margin="16dp"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <TextView
+                        android:id="@+id/OrderText"
+                        android:textSize="25dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_gravity="bottom|right"
+                    android:layout_margin="16dp"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <TextView
+
+                        android:id="@+id/OrderHarga"
+                        android:textSize="25dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </GridLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:weightSum="3"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/kurangAngka"
+                android:layout_marginRight="10dp"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:text="-"
+                android:textSize="30sp"
+                app:backgroundTint="#CC0000">
+
+            </Button>
+
+            <TextView
+                android:id="@+id/angka"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:text="1"
+                android:textSize="30dp"
+                android:gravity="center">
+
+            </TextView>
+
+            <Button
+                android:id="@+id/tambahAngka"
+                android:layout_marginLeft="10dp"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:text="+"
+                android:textSize="30sp"
+                app:backgroundTint="#01AF08">
+
+            </Button>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:weightSum="3"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/tambahQty"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:text="Add"
+                android:layout_marginTop="20dp"
+                android:textSize="15dp"
+                app:backgroundTint="#01AF08">
+
+            </Button>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

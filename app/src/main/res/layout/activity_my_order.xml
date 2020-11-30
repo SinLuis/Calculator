@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Order">
+
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg"
+        android:weightSum="15"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:weightSum="1">
+
+            <TextView
+            android:id="@+id/textOrderList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:paddingLeft="5dp"
+            android:text="Your order list :"
+            android:textColor="@android:color/black"
+            android:textSize="30sp" />
+
+        </LinearLayout>
+
+        <GridLayout
+            android:layout_marginTop="50sp"
+            android:columnCount="1"
+            android:rowCount="3"
+            android:alignmentMode="alignMargins"
+            android:columnOrderPreserved="false"
+            android:layout_weight=  "4"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:padding="14dp">
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/MyOrderGrid"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="2"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="70dp"
+                app:cardElevation="8dp"
+                app:cardCornerRadius="8dp"
+                app:cardBackgroundColor="@color/white"
+
+                >
+
+                <LinearLayout
+                    android:layout_gravity="center|left"
+                    android:layout_margin="16dp"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    >
+
+                    <ImageView
+                        android:id="@+id/MyOrderImage"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="125dp"
+                        android:layout_height="125dp"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_gravity="center|right"
+                    android:layout_margin="16dp"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <TextView
+                        android:id="@+id/MyOrderText"
+                        android:textSize="20dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_gravity="bottom|right"
+                    android:layout_margin="16dp"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <TextView
+
+                        android:id="@+id/MyOrderHarga"
+                        android:textSize="20dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </GridLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@color/white"
+            android:layout_marginLeft="340sp"
+            android:layout_marginBottom="510dp"
+            android:layout_marginTop="150sp"
+            android:layout_marginRight="10dp">
+
+            <TextView
+                android:id="@+id/MyOrderJumlah"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAlignment="center"
+                android:textSize="30dp">
+
+            </TextView>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_marginTop="250dp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingLeft="25dp"
+                android:text="Total :"
+                android:textSize="30dp"></TextView>
+
+            <TextView
+                android:id="@+id/MyOrderTotal"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:textSize="30dp">
+            </TextView>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="300dp"
+            >
+
+            <Button
+                android:id="@+id/ButtonPay"
+                android:layout_width="100dp"
+                android:layout_height="60dp"
+                android:text="Pay"
+                android:textColor="@color/black"
+                android:textSize="30dp"
+                android:layout_marginLeft="300dp"
+                app:backgroundTint = "#4CAF50">
+
+            </Button>
+        </LinearLayout>
+
+
+
+
+
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
